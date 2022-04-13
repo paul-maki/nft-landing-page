@@ -1,0 +1,21 @@
+@use 'src/index' as *;
+
+.button {
+    background-color: $primary;
+    color: $white;
+    border-radius: .75rem;
+    border: 1px solid $black;
+    font: $body-16bold;
+    padding-block: 0.875rem;
+    padding-inline: 2rem;
+}
+
+.button-secondary {
+    background-color: $white;
+    color: $primary;
+}
+
+.button-transparent {
+    background-color: rgba(0, 0, 0, 0);
+    color: $white;
+}

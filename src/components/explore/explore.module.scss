@@ -1,0 +1,19 @@
+@use 'src/index' as base;
+
+.explore {
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1.75rem;
+}
+
+.title {
+    font: base.$title-32bold;
+    margin: 0;
+}
+
+.subtitle {
+    font: base.$subtitle-22bold;
+    margin: 0;
+}

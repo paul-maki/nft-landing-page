@@ -1,0 +1,9 @@
+@use 'src/index' as base;
+
+.wrapper-layout {
+    padding: 1rem;
+    background: base.$grey-2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}

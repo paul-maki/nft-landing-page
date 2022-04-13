@@ -1,0 +1,41 @@
+@use 'src/index' as base;
+
+.live-card-container {
+    max-width: 24rem;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.live-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+.img {
+    display: block;
+}
+
+.title {
+    font: base.$subtitle-22bold;
+    color: base.$white;
+}
+
+.subtitle {
+    font: base.$body-16regular;
+    color: base.$white;
+}
+
+.orange {
+    background: #DC8D68;
+}
+
+.purple {
+    background: #A44D88;
+}
+
+.red {
+    background: #FE2900;
+}
