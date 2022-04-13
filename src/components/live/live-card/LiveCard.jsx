@@ -8,7 +8,7 @@ export const LiveCard = ({color, img, title, subtitle = "en el primer y más gra
             <div className={classNames(styles['live-card-info'], styles[`${color}`])}>
                 <span className={styles.title}>{title}</span>
                 <span className={styles.subtitle}>{subtitle}</span>
-                <Button color="transparent">{buttonText}</Button>
+                <Button className={styles.button} color="transparent">{buttonText}</Button>
             </div>
         </div>
     )

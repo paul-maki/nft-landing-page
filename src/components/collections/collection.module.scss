@@ -1,0 +1,46 @@
+@use 'src/index' as base;
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.collection-list-item {
+    display: flex;
+    height: 5.5rem;
+    padding: 1rem;
+}
+
+.collection-list-item-data {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-grow: 1;
+}
+
+.title-price-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .25rem;
+    flex-grow: 1;
+}
+
+.title, .position, .price {
+    font: base.$body-16bold;
+}
+
+.price {
+    color: base.$grey;
+}
+
+.percentage {
+    font: base.$body-16regular;
+    color: base.$green;
+    flex-grow: 1;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+}

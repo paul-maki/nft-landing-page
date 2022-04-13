@@ -1,4 +1,5 @@
 import './App.css';
+import { CollectionListSection } from './components/collections/CollectionListSection';
 import { Button } from './components/common/button/Button';
 import { Header } from './components/common/header/Header';
 import { Explore } from './components/explore/Explore';
@@ -21,6 +22,7 @@ function App() {
           <HighlightNFT artistName="Aidan Tooth" artistPic={artistPic} img={tinyDancer} title="Tiny Dancer #2" />
         </HighlightSection>
         <LiveSection/>
+        <CollectionListSection />
       </WrapperLayout>
     </div>
   );

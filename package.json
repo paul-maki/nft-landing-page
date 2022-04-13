@@ -1,16 +1,23 @@
 {
+  "homepage": "https://paul-maki.github.io/nft-landing-page",
   "name": "nft-page",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "classnames": "^2.3.1",
     "cra-template": "1.1.3",
+    "gh-pages": "^3.2.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.0",
     "sass": "^1.50.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
