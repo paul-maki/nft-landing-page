@@ -6,6 +6,8 @@ $grey: #717171;
 $white: #ffffff; 
 $green: #65c482; 
 $grey-2: #fbfdff;
+$soft-grey: rgba($grey, 0.25);
+$transparent-grey: rgba($grey, 0.1);
 
 $title-32bold: 700 2rem/2.25rem Inter; 
 $title-45bold: 700 2.8125rem/normal Inter; 
@@ -24,6 +26,31 @@ $small-tablet-landscape: 800px;
 $tablet-portrait: 768px;
 $tablet-landscape: 1024px;
 $desktop: 1200px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-landscape}) {
+      @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+      @content;
+  }
+}
+
+@mixin scrollbar {
+    /* width */
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 5px;
+  }
+    
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+}
 
 
 body {

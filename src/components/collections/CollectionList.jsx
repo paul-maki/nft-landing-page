@@ -94,13 +94,12 @@ const collectionList = [
     }
 ]
 
-
 export const CollectionList = () => {
     return (
         <div className={styles['collection-list']}>
             {collectionList.map(collection => {
                 return(
-                    <CollectionListItem position={collection.position} img={collection.img} title={collection.title} />
+                    <CollectionListItem key={collection.position} position={collection.position} img={collection.img} title={collection.title} />
                 )
             })}
         </div>

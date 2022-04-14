@@ -1,0 +1,16 @@
+@use 'src/index' as base;
+
+.header {
+    background-image: url('../../../images/explore-collections/explore-collections-header.png');
+    height: 8rem;
+    width: 100%;
+    background-size: cover;
+
+    @include base.desktop {
+        height: 12rem;
+    }
+}
+
+.title {
+    font: base.$title-45bold;
+}

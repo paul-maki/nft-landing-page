@@ -9,7 +9,7 @@
     flex-grow: 1;
     align-items: center;
     
-    @media (min-width: base.$tablet-landscape)  {
+    @include base.tablet {
         gap: 8rem;
         padding-block-end: 5rem;
     }
