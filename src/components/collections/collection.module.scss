@@ -5,10 +5,22 @@
     flex-direction: column;
 }
 
+.section-title {
+    text-align: start;
+    font: base.$subtitle-22bold;
+}
+
+.section-title-days {
+    color: base.$primary;
+
+    
+}
+
 .collection-list-item {
     display: flex;
     height: 5.5rem;
     padding: 1rem;
+    
 }
 
 .collection-list-item-data {
@@ -16,6 +28,7 @@
     align-items: center;
     gap: .5rem;
     flex-grow: 1;
+    border-block-end: 1px solid rgba($color: base.$grey, $alpha: 0.25);
 }
 
 .title-price-container{
