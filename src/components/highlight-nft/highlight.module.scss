@@ -1,7 +1,22 @@
 @use 'src/index' as base;
 
+.highlight-section {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+    
+    @media (min-width: base.$tablet-landscape)  {
+        gap: 8rem;
+        padding-block-end: 5rem;
+    }
+}
+
 .highlight-container {
-    max-width: 20.5rem;
+    max-width: 36.75rem;
     border-radius: .5rem;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.19); 
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.19); 
@@ -30,14 +45,6 @@
     align-items: flex-start;
     justify-content: center;
     gap: .25rem;
-}
-
-.highlight-section {
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
 }
 
 .img-background {

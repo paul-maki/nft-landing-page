@@ -97,7 +97,7 @@ const collectionList = [
 
 export const CollectionList = () => {
     return (
-        <div>
+        <div className={styles['collection-list']}>
             {collectionList.map(collection => {
                 return(
                     <CollectionListItem position={collection.position} img={collection.img} title={collection.title} />

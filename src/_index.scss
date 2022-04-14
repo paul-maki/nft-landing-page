@@ -5,7 +5,8 @@ $black: #222222;
 $grey: #717171; 
 $white: #ffffff; 
 $green: #65c482; 
-$grey-2: #fbfdff; 
+$grey-2: #fbfdff;
+
 $title-32bold: 700 2rem/2.25rem Inter; 
 $title-45bold: 700 2.8125rem/normal Inter; 
 $subtitle-22medium: 500 1.375rem/1.625rem Inter; 
@@ -14,7 +15,15 @@ $body-16regular: 400 1rem/1.25rem Inter;
 $body-16bold: 700 1rem/1.25rem Inter; 
 $body-14regular: 400 0.875rem/1.125rem Inter; 
 $body-14regular_u: 500 0.875rem/1.25rem Inter; 
-$caption-12bold: 700 0.75rem/1rem Inter; 
+$caption-12bold: 700 0.75rem/1rem Inter;
+
+$mobile-portrait: 320px;
+$mobile-landscape: 480px;
+$small-tablet-portrait: 600px;
+$small-tablet-landscape: 800px;
+$tablet-portrait: 768px;
+$tablet-landscape: 1024px;
+$desktop: 1200px;
 
 
 body {

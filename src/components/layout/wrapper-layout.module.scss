@@ -6,4 +6,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+    justify-content: center;
+
+    @media (min-width: base.$tablet-landscape)  {
+        padding: 5rem;
+    }
 }
