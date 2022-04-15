@@ -1,9 +1,14 @@
 @use 'src/index' as base;
 
 .live-card-container {
-    max-width: 24rem;
+    max-width: 34rem;
     border-radius: .5rem;
     overflow: hidden;
+    width: 100%;
+
+    @include base.tablet {
+        max-width: 24rem;
+    }
 }
 
 .live-card-info {

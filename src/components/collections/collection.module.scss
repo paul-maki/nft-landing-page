@@ -4,10 +4,6 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-
-    @include base.tablet {
-        padding: 5rem;
-    }
 }
 
 .section-title {

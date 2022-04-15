@@ -8,6 +8,12 @@
     gap: 1.5rem;
     justify-content: center;
     position: relative;
+    max-width: 1200px;
+    margin: auto;
+
+    @include base.small-tablet {
+        padding: 2rem;
+    }
 
     @include base.tablet {
         padding: 4rem;
