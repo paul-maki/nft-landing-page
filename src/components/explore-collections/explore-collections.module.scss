@@ -1,0 +1,12 @@
+@use 'src/index' as base;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.title {
+    font: base.$title-45bold;
+}

@@ -1,33 +1,47 @@
-import { useState } from 'react';
-import { CollectionList } from '../../collections/CollectionList';
-import { TabPane } from '../../common/tabs/TabPane';
 import { WrapperLayout } from '../../layout/Wrapper-layout';
 import styles from './explore-collections-page.module.scss';
-import { SelectedCollection } from './SelectedCollection';
+import { ExploreCollectionContainer } from '../../explore-collections/ExploreCollectionContainer';
+import { useEffect, useState } from 'react';
+import { trendCollection } from '../../../fake-api/trends';
 
-const collectionsList = [
-                            { title: 'Tendencias' }, 
-                            { title: 'Cima'}, 
-                            { title: 'Arte'}, 
-                            { title: 'Música'}, 
-                            { title: 'Mundos virtuales'}, 
-                            { title: 'Cartas coleccionables'}];
+export const ExploreCollectionsPage = () => {    
+    const [collectionList, setCollectionList] = useState(null);
 
-const tabList = collectionsList.map(collection => collection.title);
+    useEffect(() => {
+        const collectionData = [
+            {   
+                title: 'Tendencias', 
+                collection :  trendCollection
+            }, 
+            { 
+                title: 'Cima',
+                collection :  trendCollection
+            }, 
+            { 
+                title: 'Arte',
+                collection :  trendCollection
+            }, 
+            { 
+                title: 'Música' ,
+                collection :  trendCollection
+            }, 
+            { 
+                title: 'Mundos virtuales',
+                collection :  trendCollection
+            }, 
+            { 
+                title: 'Cartas coleccionables',
+                collection :  trendCollection
+            }
+        ];
 
-export const ExploreCollectionsPage = () => {
-    const [selectedCollection, setSelectedCollection] = useState(tabList[0]);
-    const handleActiveTab = (activeTab) => {
-        setSelectedCollection(activeTab);
-    }
-
+        setCollectionList(collectionData);
+    }, [])
     return (
         <div>
             <header className = {styles.header} />
             <WrapperLayout>
-                <h1 className={styles.title}>Explorar colecciones</h1>
-                <TabPane handleActiveTab={handleActiveTab} tabs= {tabList} />
-                <SelectedCollection selectedCollection={selectedCollection}  />
+                {collectionList && <ExploreCollectionContainer collectionList={collectionList} />}                
             </WrapperLayout>
         </div>
     )

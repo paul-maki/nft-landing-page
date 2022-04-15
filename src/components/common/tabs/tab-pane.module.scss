@@ -3,17 +3,14 @@
 .tab-pane {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1rem;
     flex-wrap: nowrap;
-    overflow: hidden;
-    width: 1200px;
     white-space: nowrap;
+    overflow: scroll;
 
     @include base.scrollbar;
 
     &:hover {
-        overflow: scroll;
-        
-        
+        overflow: scroll;       
     }
 }
