@@ -1,18 +1,26 @@
 {
   "files": {
-    "main.css": "/nft-landing-page/static/css/main.46222fbc.css",
-    "main.js": "/nft-landing-page/static/js/main.d1e71c8e.js",
+    "main.css": "/nft-landing-page/static/css/main.6a02d8da.css",
+    "main.js": "/nft-landing-page/static/js/main.7cb988a4.js",
     "static/media/explore-collections-header.png": "/nft-landing-page/static/media/explore-collections-header.2e38249b38e9f60c41d1.png",
+    "static/media/doblado.png": "/nft-landing-page/static/media/doblado.38254faa7c9c1fbf360e.png",
     "static/media/live2.png": "/nft-landing-page/static/media/live2.c098381e414f20f1fa86.png",
+    "static/media/galaxy-kats-universe.png": "/nft-landing-page/static/media/galaxy-kats-universe.af68b098f8955e307da7.png",
     "static/media/live1.png": "/nft-landing-page/static/media/live1.3f0148224d63efe41a7a.png",
+    "static/media/loomlocknft.png": "/nft-landing-page/static/media/loomlocknft.6ff33ed5e288a959ae72.png",
+    "static/media/sandboxnft.png": "/nft-landing-page/static/media/sandboxnft.817a453e73f0e526fba0.png",
     "static/media/live3.png": "/nft-landing-page/static/media/live3.8dcb4ecde1275dae9fa2.png",
+    "static/media/budverse.png": "/nft-landing-page/static/media/budverse.0a3b64fe746521be2738.png",
+    "static/media/cool-cats-nft.png": "/nft-landing-page/static/media/cool-cats-nft.44fdb31a43e5db526569.png",
+    "static/media/monaco-planet.png": "/nft-landing-page/static/media/monaco-planet.6b15e7c8b489d3d3b099.png",
+    "static/media/deconstrucciones.png": "/nft-landing-page/static/media/deconstrucciones.cb63b17eae20c3521d01.png",
     "static/media/tiny-dancer.png": "/nft-landing-page/static/media/tiny-dancer.9c6ae61062dfb5d9587a.png",
     "index.html": "/nft-landing-page/index.html",
-    "main.46222fbc.css.map": "/nft-landing-page/static/css/main.46222fbc.css.map",
-    "main.d1e71c8e.js.map": "/nft-landing-page/static/js/main.d1e71c8e.js.map"
+    "main.6a02d8da.css.map": "/nft-landing-page/static/css/main.6a02d8da.css.map",
+    "main.7cb988a4.js.map": "/nft-landing-page/static/js/main.7cb988a4.js.map"
   },
   "entrypoints": [
-    "static/css/main.46222fbc.css",
-    "static/js/main.d1e71c8e.js"
+    "static/css/main.6a02d8da.css",
+    "static/js/main.7cb988a4.js"
   ]
 }
