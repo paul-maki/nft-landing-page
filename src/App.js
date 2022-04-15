@@ -6,7 +6,7 @@ import { MainPage } from './components/pages/main-page/MainPage';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename='/nft-landing-page'>
         <Routes>
           <Route path='/' element={<MainPage />} />
           <Route path='/explore' element={<ExploreCollectionsPage />} />
