@@ -5,6 +5,8 @@
     overflow: hidden;
     max-width: 27.75rem ;
     border: 1px solid base.$transparent-grey;
+    flex-grow: 1;
+    height: 100%;
 }
 
 .artist-image {

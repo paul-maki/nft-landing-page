@@ -17,3 +17,13 @@
     font: base.$subtitle-22bold;
     margin: 0;
 }
+
+.link {
+    display: flex;
+    flex-grow: 1;
+    text-decoration: none;
+}
+
+.button {
+    flex-grow: 1;
+}

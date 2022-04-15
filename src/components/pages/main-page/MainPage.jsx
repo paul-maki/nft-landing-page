@@ -8,9 +8,9 @@ import { LiveSection } from '../../live/LiveSection';
 export const MainPage = () => {
     return(
         <div>
-            <Header>
+            {/* <Header>
                 <Button>Iniciar sesión</Button>
-            </Header>
+            </Header> */}
             <WrapperLayout>
                 <HighlightSection />
                 <LiveSection/>

@@ -6,11 +6,11 @@
     cursor: pointer;
     padding: .5rem;
     border-radius: .25rem;
+    flex-grow: 1;
 
     &:hover{
         background: base.$transparent-grey;
-    }
-    
+    }   
 }
 
 .active {
