@@ -53,6 +53,9 @@ $desktop: 1200px;
 
 @mixin scrollbar {
     /* width */
+    scrollbar-width: thin;
+    scrollbar-color: $grey $white;
+
   &::-webkit-scrollbar {
     width: 0;
     height: 5px;
