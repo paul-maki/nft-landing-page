@@ -11,8 +11,8 @@ export const MainPage = () => {
             {/* <Header>
                 <Button>Iniciar sesión</Button>
             </Header> */}
-            <WrapperLayout>
-                <HighlightSection />
+            <HighlightSection />
+            <WrapperLayout>                
                 <LiveSection/>
                 <CollectionListSection />
             </WrapperLayout>

@@ -1,8 +1,13 @@
 @use 'src/index' as base;
 
+.highlight-section-container {
+    display: flex;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+}
+
 .highlight-section {
     display: flex;
-    position: relative;
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
@@ -13,6 +18,7 @@
         gap: 8rem;
         padding-block-end: 5rem;
     }
+
 }
 
 .highlight-container {
@@ -22,12 +28,14 @@
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.19); 
     overflow: hidden;
     flex-grow: 1;
+    flex-shrink: 13;
 }
 
 .footer {
     display: flex;
     gap: .5rem;
     padding: 1rem;
+    background-color: base.$white;
 }
 
 .title {
@@ -47,11 +55,28 @@
     gap: .25rem;
 }
 
-.img-background {
+.background-image-container {
     position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
-    height: auto;
-    opacity: 0.6;
+    overflow: hidden;
 }
+
+.background-image {
+    height: 42rem;
+    background-image: url('../../images/highlight/tiny-dancer.png');
+    background-size: cover;
+    background-color: base.$white;
+    background-position: center center;
+    opacity: .2;
+    overflow: hidden;
+    mask: linear-gradient(rgb(255, 255, 255), transparent);
+
+    @include base.small-tablet {
+        height: 50.5rem;
+    }
+
+    @include base.tablet {
+        height: 39rem;
+    }
+}
+

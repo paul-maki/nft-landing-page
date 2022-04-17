@@ -14,7 +14,7 @@
 }
 
 .subtitle {
-    font: base.$subtitle-22bold;
+    font: base.$subtitle-22medium;
     margin: 0;
 }
 
@@ -22,8 +22,19 @@
     display: flex;
     flex-grow: 1;
     text-decoration: none;
+    gap: 1rem;
+
+    @include base.small-tablet {
+        gap: 2rem;
+    }
 }
 
 .button {
     flex-grow: 1;
+    max-width: 10rem;
+    flex-wrap: wrap;
+
+    @include base.small-tablet {
+        width: 10rem;
+    }
 }

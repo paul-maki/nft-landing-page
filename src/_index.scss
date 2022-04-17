@@ -27,6 +27,12 @@ $tablet-portrait: 768px;
 $tablet-landscape: 1024px;
 $desktop: 1200px;
 
+@mixin mobile-landscape {
+  @media (min-width: #{$mobile-landscape}) {
+      @content;
+  }
+}
+
 @mixin small-tablet {
   @media (min-width: #{$small-tablet-portrait}) {
       @content;
