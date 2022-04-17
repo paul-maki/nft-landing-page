@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/nft-landing-page/static/css/main.62875257.css",
+    "main.css": "/nft-landing-page/static/css/main.da625d14.css",
     "main.js": "/nft-landing-page/static/js/main.8823d91f.js",
     "static/media/explore-collections-header.png": "/nft-landing-page/static/media/explore-collections-header.2e38249b38e9f60c41d1.png",
     "static/media/doblado.png": "/nft-landing-page/static/media/doblado.38254faa7c9c1fbf360e.png",
@@ -16,11 +16,11 @@
     "static/media/deconstrucciones.png": "/nft-landing-page/static/media/deconstrucciones.cb63b17eae20c3521d01.png",
     "static/media/tiny-dancer.png": "/nft-landing-page/static/media/tiny-dancer.9c6ae61062dfb5d9587a.png",
     "index.html": "/nft-landing-page/index.html",
-    "main.62875257.css.map": "/nft-landing-page/static/css/main.62875257.css.map",
+    "main.da625d14.css.map": "/nft-landing-page/static/css/main.da625d14.css.map",
     "main.8823d91f.js.map": "/nft-landing-page/static/js/main.8823d91f.js.map"
   },
   "entrypoints": [
-    "static/css/main.62875257.css",
+    "static/css/main.da625d14.css",
     "static/js/main.8823d91f.js"
   ]
 }
