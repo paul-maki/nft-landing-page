@@ -3,6 +3,7 @@
 .collection-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     @include base.desktop {
         flex-direction: row;
