@@ -1,0 +1,50 @@
+@use 'src/index' as base;
+
+.card {
+    font: base.$caption-12regular;
+    max-width: 9rem;
+    border: 1px solid base.$transparent-grey;
+    align-items: center;
+    border-radius: .75rem;
+    overflow: hidden;
+
+    @include base.small-tablet {
+        font: base.$body-14regular;
+        max-width: 11.25rem;
+    }
+    
+    .info {
+        display: flex;
+        padding: .5rem;
+    }
+
+    .title-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font: base.$body-14bold;   
+    }
+
+    .price-container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        color: base.$grey;
+        text-align: end;
+        gap: .25rem;
+
+        .value, .old-value {
+            font-weight: bold;
+        }
+    }
+
+    .value-container, .last-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .last-container {
+        font: base.$small-10regular;
+    }
+}

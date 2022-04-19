@@ -1,0 +1,34 @@
+@use 'src/index' as base;
+
+.header {
+    max-height: 38rem;
+    width: 100%;
+    position: relative;
+
+    .image-container {
+        position: relative;
+
+        .artist-image {
+            height: 5rem;
+            width: 5rem;
+            position : absolute;
+            bottom: - 2.5rem;
+            left: calc(50% - 2.5rem);
+        }
+    }
+
+    .title {
+        font: base.$title-32bold;
+        padding-block-start: 2rem;
+    }
+
+    .subtitle, .artist-name {
+        font: base.$body-16regular;
+    }
+
+    .artist-name {
+        color: base.$primary;
+    }
+}
+
+

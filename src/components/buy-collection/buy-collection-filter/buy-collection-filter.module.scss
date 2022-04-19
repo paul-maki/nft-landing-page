@@ -1,0 +1,61 @@
+@use 'src/index' as base;
+
+.container {
+    max-width: 24rem;
+    padding: 1rem;
+    margin: auto;
+}
+
+.summary {
+    list-style: none;
+    font: base.$body-16bold;
+    &::marker, &::-webkit-details-marker {
+        display: none;
+        content: "";
+    }
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    border-block-end: 1px solid base.$soft-grey;
+    gap: .5rem;
+    width: 100%;
+
+    .total-options {
+        margin-inline-start: auto;
+        color: base.$grey;
+        font: base.$body-16regular;
+    }
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-container {
+    display: flex;
+    width: 100%;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    font: base.$body-16regular;
+    background: base.$grey-2;
+    box-sizing: border-box;
+}
+
+.option {
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+
+    .quantity {
+        margin-inline-start: auto;
+    }
+
+    .checkbox {
+
+    }
+
+    .optionText {
+        margin-inline-start: .5rem;
+    }
+}

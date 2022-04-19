@@ -1,0 +1,42 @@
+@use 'src/index' as base;
+
+.container {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    .results {
+        font: base.$subtitle-22medium;
+        grid-column-start: span 2;
+        width: 100%;
+        text-align: start;
+        color: base.$grey;
+
+        @include base.mobile-landscape {
+            grid-column-start: span 3;
+        }
+    
+        @include base.tablet {
+            grid-column-start: span 4;
+        }
+    }
+}
+
+.buy-collection-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    justify-items: center;
+    margin: auto;
+    gap: 1rem;
+
+    @include base.mobile-landscape {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include base.tablet {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}
