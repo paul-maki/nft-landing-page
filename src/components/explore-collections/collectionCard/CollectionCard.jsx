@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import styles from './collection-card.module.scss';
 
 export const CollectionCard = ({img, title, artistName, artistImg, text}) => {
     return(
-        <div className={styles.container}>
+        <Link to="/cool-cats-nft" className={styles.container}>
             <div className={styles['image-container']}>
                 <img className={styles.nft} width="100%" height="auto" alt={title} src={img} />
                 <img className={styles['artist-image']}  alt={artistName} src={artistImg} />
@@ -15,6 +16,6 @@ export const CollectionCard = ({img, title, artistName, artistImg, text}) => {
                 </div>
                 <span className={styles.text}>{text}</span>
             </div>
-        </div>
+        </Link>
     )
 }
