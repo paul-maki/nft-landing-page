@@ -4,8 +4,7 @@ import { roundNumber } from "../../../tools/roundNumber";
 import styles from './buy-collection-list.module.scss';
 import { BuyCollectionFilterCard } from "../buy-collection-filter/buy-collection-filter-card/BuyCollectionFilterCard";
 
-export const BuyCollectionListContainer = ({selectedOptions}) => {
-    console.log(selectedOptions);
+export const BuyCollectionListContainer = ({selectedOptions, handleSelectedOption}) => {
     const collectionList = [
         {
             ...createCardData(),
@@ -57,7 +56,7 @@ export const BuyCollectionListContainer = ({selectedOptions}) => {
         <div className={styles.container}>
             <div className={styles['selected-options-card-container']}>
                 {selectedOptions && selectedOptions.map(option => {
-                    return <BuyCollectionFilterCard key={option}>{option}</BuyCollectionFilterCard>
+                    return <BuyCollectionFilterCard key={option} handleRemoveOption={handleSelectedOption}>{option}</BuyCollectionFilterCard>
                 })}
             </div>
             <BuyCollectionList collectionList={collectionList} />

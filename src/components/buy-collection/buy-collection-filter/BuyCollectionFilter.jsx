@@ -88,7 +88,7 @@ export const BuyCollectionFilter = ({selectedOptions, handleSelectedOption}) => 
     
     const handleFilterOpen = () => {
         setFilterOpen((oldFilterOpen) => !oldFilterOpen)
-    }    
+    }   
 
     return( 
         <div className={styles.container}>
@@ -100,8 +100,9 @@ export const BuyCollectionFilter = ({selectedOptions, handleSelectedOption}) => 
                             <BuyCollectionFilterSummary icon={<BsGrid size="1.25rem"/>} title={filter.title} totalOptions={filter.options.length}/>
                             <div className={styles['options-container']}>
                                 {filter.options.map(option => {
+                                    const checked = selectedOptions.some(selectedOption => option.option === selectedOption);
                                     return (
-                                        <BuyCollectionFilterOption key={option.option} handleSelectedOption={handleSelectedOption} option={option.option} quantity={option.quantity} />
+                                        <BuyCollectionFilterOption checked={checked} key={option.option} handleSelectedOption={handleSelectedOption} option={option.option} quantity={option.quantity} />
                                     )
                                 })}
                             </div>
