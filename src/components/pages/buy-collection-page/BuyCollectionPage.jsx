@@ -5,14 +5,27 @@ import headerCoolCats from '../../../images/buy-collection/header/header-cool-ca
 import { BuyCollectionListContainer } from "../../buy-collection/buy-collection-list/BuyCollectionListContainer";
 import styles from './buy-collection-page.module.scss';
 import { WrapperLayout } from "../../layout/Wrapper-layout";
+import { useState } from "react";
 
 export const BuyCollectionPage = () => {
+    const [selectedOptions, setSelectedOptions] = useState([]);
+
+    const handleSelectedOption = (option) => {
+        const findOption = selectedOptions.find(selectedOption => selectedOption === option);
+        if (findOption) {
+            const filteredSelectedOptions = selectedOptions.filter(selectedOption => selectedOption !== option)
+            setSelectedOptions(filteredSelectedOptions)
+        } else {
+            setSelectedOptions(oldSelectedOptions => [...oldSelectedOptions, option])
+        }        
+    }
+
      return(<>
             <BuyCollectionHeader artistImg={artistCoolCats} artistName="CoolCatsContract" headerImg={headerCoolCats} title="Cool Cats NFT"/>
                 <WrapperLayout>
                     <div className={styles['collection-container']}>
-                        <BuyCollectionFilter />
-                        <BuyCollectionListContainer />
+                        <BuyCollectionFilter handleSelectedOption={handleSelectedOption} selectedOptions={selectedOptions}/>
+                        <BuyCollectionListContainer selectedOptions={selectedOptions} />
                     </div>
                 </WrapperLayout>
             </>

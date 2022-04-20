@@ -5,7 +5,7 @@ import { BuyCollectionFilterSummary } from './BuyCollectionFilterSummary';
 import { useState } from 'react';
 import { BuyCollectionFilterOption } from './BuyCollectionFilterOption';
 
-export const BuyCollectionFilter = () => {
+export const BuyCollectionFilter = ({selectedOptions, handleSelectedOption}) => {
     const filterList = [
         {
             title: 'Face',
@@ -83,26 +83,15 @@ export const BuyCollectionFilter = () => {
             ]
         }
     ]
-    const [filterOpen, setFilterOpen] = useState(true);
-    const [selectedOptions, setSelectedOptions] = useState([]);
 
+    const [filterOpen, setFilterOpen] = useState(true);
+    
     const handleFilterOpen = () => {
         setFilterOpen((oldFilterOpen) => !oldFilterOpen)
-    }
-
-    const handleSelectedOption = (option) => {
-        const findOption = selectedOptions.find(selectedOption => selectedOption === option);
-        if (findOption) {
-            const filteredSelectedOptions = selectedOptions.filter(selectedOption => selectedOption !== option)
-            setSelectedOptions(filteredSelectedOptions)
-        } else {
-            setSelectedOptions(oldSelectedOptions => [...oldSelectedOptions, option])
-        }        
-    }
+    }    
 
     return( 
         <div className={styles.container}>
-            {selectedOptions.map(option => <p>{option}</p>)}
             <details className={styles.details} open>
                 <BuyCollectionFilterSummary handleFilterOpen={handleFilterOpen} open={filterOpen} icon={<FiFilter size="1.25rem" />} totalFilters={selectedOptions && selectedOptions.length} title="Filters"/>
                 {filterList.map(filter => {

@@ -1,0 +1,19 @@
+@use 'src/index' as base;
+
+.card {
+    display: flex;
+    height: 2.5rem;
+    font: base.$body-16regular;
+    border: 1px solid base.$primary-border;
+    border-radius: .5rem;
+    padding-inline: 1.5rem;
+    padding-block: .5rem;
+    align-items: center;
+    gap: .25rem;
+    background: base.$primary-soft;
+
+    &:hover {
+        -webkit-box-shadow: base.$box-shadow-soft;
+        box-shadow: base.$box-shadow-soft;
+    }
+}

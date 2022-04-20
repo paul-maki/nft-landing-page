@@ -21,6 +21,12 @@
             grid-column-start: span 4;
         }
     }
+
+    .selected-options-card-container {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
 }
 
 .buy-collection-list {

@@ -2,8 +2,10 @@ import { BuyCollectionList } from "./BuyCollectionList";
 import * as cats from '../../../images/buy-collection/list';
 import { roundNumber } from "../../../tools/roundNumber";
 import styles from './buy-collection-list.module.scss';
+import { BuyCollectionFilterCard } from "../buy-collection-filter/buy-collection-filter-card/BuyCollectionFilterCard";
 
-export const BuyCollectionListContainer = () => {
+export const BuyCollectionListContainer = ({selectedOptions}) => {
+    console.log(selectedOptions);
     const collectionList = [
         {
             ...createCardData(),
@@ -53,6 +55,11 @@ export const BuyCollectionListContainer = () => {
 
     return(
         <div className={styles.container}>
+            <div className={styles['selected-options-card-container']}>
+                {selectedOptions && selectedOptions.map(option => {
+                    return <BuyCollectionFilterCard key={option}>{option}</BuyCollectionFilterCard>
+                })}
+            </div>
             <BuyCollectionList collectionList={collectionList} />
         </div>
     )

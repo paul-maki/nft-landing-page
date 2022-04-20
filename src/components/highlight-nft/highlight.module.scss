@@ -22,8 +22,8 @@
 .highlight-container {
     max-width: 34rem;
     border-radius: .5rem;
-    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.19); 
-    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.19); 
+    -webkit-box-shadow: base.$box-shadow;
+    box-shadow: base.$box-shadow;
     overflow: hidden;
     flex-grow: 1;
     flex-shrink: 13;
