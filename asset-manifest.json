@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nft-landing-page/static/css/main.29c736f0.css",
-    "main.js": "/nft-landing-page/static/js/main.bef08e58.js",
+    "main.css": "/nft-landing-page/static/css/main.113b8744.css",
+    "main.js": "/nft-landing-page/static/js/main.6bef24b8.js",
     "static/media/header-cool-cats.png": "/nft-landing-page/static/media/header-cool-cats.4e2b65e1ac880a509485.png",
     "static/media/explore-collections-header.png": "/nft-landing-page/static/media/explore-collections-header.2e38249b38e9f60c41d1.png",
     "static/media/doblado.png": "/nft-landing-page/static/media/doblado.38254faa7c9c1fbf360e.png",
@@ -38,11 +38,11 @@
     "static/media/cat5.png": "/nft-landing-page/static/media/cat5.04e234971ced268121fc.png",
     "static/media/artist-cool-cats.png": "/nft-landing-page/static/media/artist-cool-cats.5620be60a3f15761a884.png",
     "index.html": "/nft-landing-page/index.html",
-    "main.29c736f0.css.map": "/nft-landing-page/static/css/main.29c736f0.css.map",
-    "main.bef08e58.js.map": "/nft-landing-page/static/js/main.bef08e58.js.map"
+    "main.113b8744.css.map": "/nft-landing-page/static/css/main.113b8744.css.map",
+    "main.6bef24b8.js.map": "/nft-landing-page/static/js/main.6bef24b8.js.map"
   },
   "entrypoints": [
-    "static/css/main.29c736f0.css",
-    "static/js/main.bef08e58.js"
+    "static/css/main.113b8744.css",
+    "static/js/main.6bef24b8.js"
   ]
 }
