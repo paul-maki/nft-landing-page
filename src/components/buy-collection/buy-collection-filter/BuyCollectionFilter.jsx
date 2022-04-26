@@ -2,87 +2,61 @@ import styles from './buy-collection-filter.module.scss';
 import { FiFilter } from 'react-icons/fi';
 import { BsGrid } from 'react-icons/bs';
 import { BuyCollectionFilterSummary } from './BuyCollectionFilterSummary';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BuyCollectionFilterOption } from './BuyCollectionFilterOption';
 
-export const BuyCollectionFilter = ({selectedOptions, handleSelectedOption}) => {
-    const filterList = [
-        {
-            title: 'Face',
-            options: [
-                {
-                    option: 'Ditto',
-                    quantity: 266
-                },
-                {
-                    option: 'Mummy',
-                    quantity: 261
-                },
-                {
-                    option: 'Beard pirate',
-                    quantity: 260
-                },
-                {
-                    option: 'Zombie',
-                    quantity: 258
-                },
-                {
-                    option: 'Three eyes',
-                    quantity: 255
-                },
-                {
-                    option: 'Unamused',
-                    quantity: 252
-                },
-                {
-                    option: 'Angry cute',
-                    quantity: 252
-                },
-                {
-                    option: 'Stunned',
-                    quantity: 250
-                },
-                {
-                    option: 'Sunglasses heart',
-                    quantity: 246
-                },
-            ]
-        },
-        {
-            title: 'Hats',
-            options: [
-                {
-                    option: 'Hat white',
-                    quantity: 266
-                },
-                {
-                    option: 'Bucket hat green',
-                    quantity: 261
-                },
-                {
-                    option: 'Mohawk green',
-                    quantity: 260
+const capitalize = (string) => {
+    return string[0].toUpperCase() + string.substring(1);
+}
+
+export const BuyCollectionFilter = ({collectionList, selectedOptions, handleSelectedOption}) => {
+    const [filterList, setFilterList] = useState([]);
+
+    useEffect(() => {
+        const titles = [];
+        const options = [];
+        collectionList.forEach(nft => {
+            options.push(nft.options);       
+        })
+
+        options.forEach(option => {
+            const keys = Object.keys(option);
+            keys.forEach(key => {
+                if (!titles.find(title => title.title === capitalize(key))) {                     
+                    const optionFilters = collectionList.map(nft => {
+                        let quantity = 0;
+                        collectionList.forEach((col) => {
+                            if (col.options[key] === nft.options[key]) {
+                                quantity++;
+                            }
+                        })
+                        return {
+                            option: nft.options[key],
+                            quantity: quantity
+                        }
+                    });
+
+                    const uniqueOptionFilters = [];
+                    optionFilters.forEach(optionFilter => {
+                        if (!uniqueOptionFilters.find(unique => unique.option === optionFilter.option)) {
+                            uniqueOptionFilters.push(optionFilter);
+                        }
+                    })
+
+                    titles.push({
+                        title: capitalize(key),
+                        options : uniqueOptionFilters                                                            
+                    });
                 }                
-            ]
-        },
-        {
-            title: 'Shirt',
-            options: [
-                {
-                    option: 'Overalls blue',
-                    quantity: 266
-                },
-                {
-                    option: 'Buttondown green',
-                    quantity: 261
-                },
-                {
-                    option: 'Robe blue',
-                    quantity: 260
-                }
-            ]
-        }
-    ]
+            })
+        })
+
+        setFilterList(titles)
+       
+        //console.log(titles);
+        // setFilterList(options);
+        
+    }, [collectionList])
 
     const [filterOpen, setFilterOpen] = useState(true);
     
