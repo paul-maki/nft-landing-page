@@ -23,7 +23,11 @@ export const BuyCollectionPage = () => {
     const collectionList = [
         {
             ...createCardData(),
-            img: cats.cat1
+            img: cats.cat1,
+            options: [
+                'Bucket hat green',
+                ''
+            ]
         },
         {
             ...createCardData(),
